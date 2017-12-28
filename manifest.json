@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "两学一做 自动答题机器人（双击屏幕左侧答题）",
+  "description": "两学一做 自动答题机器人",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    //"http://cn-mirrors.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["http://ks.gdycjy.gov.cn/kQuestion.shtml?*"],
+      //"js" : ["auto-answer.js"]
+      "js" : ["inject.js"]
+    }
+  ]
+}
